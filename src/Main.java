@@ -1,20 +1,24 @@
 public class Main {
     public static void main(String[] args) {
+//        System.out.println(reverseInteger(10239));
+//        System.out.println(encryptThis("Money doesn't mean anything to me"));
+//        System.out.println(decipherThis("71fier 99sangeh 115eaph 98tu 105t 110rvee 101sdn"));
     }
     // 1. parenthesesCheck
     public static boolean parenthesesCheck(String str){
-        boolean result = false;
         int balance = 0;
-
-        for (int i = 0; i < str.length(); i++){
-            if(str.charAt(i) == '('){
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '('){
                 balance++;
             }
-            else if(str.charAt(i) == ')'){
-                balance --;
+            else{
+                balance--;
+            }
+            if (balance < 0){
+                return false;
             }
         }
-        return result;
+        return balance == 0;
     }
 
     // 2. reverseInteger
