@@ -11,7 +11,7 @@ public class Main {
             if (str.charAt(i) == '('){
                 balance++;
             }
-            else{
+            else {
                 balance--;
             }
             if (balance < 0){
